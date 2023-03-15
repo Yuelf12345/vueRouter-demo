@@ -39,7 +39,7 @@ export default {
         this.$children[0].$parent = this.$parent
     }
 }
-}
+
 
 
 </script>
