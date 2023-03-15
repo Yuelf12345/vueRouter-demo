@@ -1,5 +1,5 @@
 <template>
-    <el-submenu :index="item.path"  v-if="item.children" :popper-append-to-body = false>
+    <el-submenu :index="item.path"  v-if="item.children" popper-append-to-body>
               <template slot="title">
                 <i :class=item.meta.icon></i>
             <span slot="title">{{item?.meta.title}}</span>
@@ -34,7 +34,11 @@ export default {
         return {
             
         }
+    },
+    mounted(){
+        this.$children[0].$parent = this.$parent
     }
+}
 }
 
 
