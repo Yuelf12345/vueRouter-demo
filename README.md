@@ -3,6 +3,8 @@ cd server 8081
 ## 安装依赖
 ```
 npm install 推荐使用 yarn install
+
+npm i nodemon
 ```
 ## 启动服务
 ```
