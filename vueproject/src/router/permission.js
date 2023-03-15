@@ -15,9 +15,10 @@ const whiteList = ['/login']  //  无重定向白名单
 
 // 全局前置守卫鉴权
 router.beforeEach(async(to,from,next)=>{
+    if(from.path !== '/dashboard'){
     //进度条开始
     NProgress.start()
-
+    }
     var userRoutes = [];
     const hasToken = getToken()
     //是否有角色
